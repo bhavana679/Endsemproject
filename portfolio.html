@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ivory Luxe | Our Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgba(236, 236, 234, 0.943);
+            color: #ecf0f1;
+            overflow-x: hidden;
+        }
+        h2{
+            font-size: 70px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(20, 24, 24, 0.527), rgb(0, 0, 0));
+            animation: navbargradientAnimation 10s ease infinite;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .navbar a {
+            text-decoration: none;
+        }
+
+        /* Portfolio Sections */
+        .section {
+            padding: 50px;
+            text-align: center;
+            color: #333;
+            background-color: rgba(245, 245, 220, 0.52);
+        }
+        .showcase {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .showcase-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .showcase-item img {
+            width: 300px;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+        .showcase-item img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+            transition: all 0.3s ease-in-out;
+        }
+
+
+        .showcase-item p {
+            font-family: 'Cormorant SC', serif;
+            color: #333;
+            text-align: justify;
+            max-width: 500px;
+        }
+
+
+        .showcase img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+
+        .videos {
+            display: flex;
+            justify-content: space-between; /* Adjust for spacing between videos */
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .videos video {
+            width: calc(50% - 10px); /* Adjust width to fit 2 videos in each row */
+            height: 500px; /* Increase the height of the videos */
+            object-fit: cover; /* Stretch the video to cover the area */
+            border-radius: 10px;
+        }
+
+
+        .slider-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .slider {
+            display: flex;
+            width: calc(400px * 32 + 40px * 31); /* Total width for all images, including duplicates */
+            animation: slide 20s linear infinite; /* Slow down animation duration for smoother effect */
+        }
+
+        .slider img {
+            width: 200px;
+            height: 100px;
+            margin-right: 40px;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Moves the slider left by 50% of its total width */
+        }
+
+
+
+        /* Back to Top */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 0px;
+            background-color: #dbe2eaac;
+            color: rgb(27, 25, 25);
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 10px;
+            display: none;
+            z-index: 1000;
+        }
+
+        #back-to-top:hover {
+            background-color: #d6bd42;
+        }
+        .showcase p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><h1 style="font-family: 'Herr Von Muellerhoff', sans-serif;">Ivory Luxe</h1></a>
+            </div>
+            <ul class="nav-links" style="font-family:Cormorant SC ;">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Portfolio Content -->
+    <section class="section">
+        <h2 style="font-family:  'Herr Von Muellerhoff', sans-serif;">Astonishing Works</h2>
+        <p style="font-family: Cormorant SC;font-size: 30px;">Ivory Luxe has consistently pushed the boundaries of creativity and innovation, turning ordinary events into extraordinary experiences. From curating elegant themes to executing every detail flawlessly, our work has left an indelible mark on countless occasions. Explore our writings to uncover the passion and dedication that drive us to create timeless memories.</p>
+    </section>
+
+    <section class="section">
+        <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;">Weddings</h2>
+        <div class="showcase">
+            <div style="display: flex; align-items: center;gap:1px;padding: 10px;">
+                <img src="pexels-alexander-mass-748453803-19372846.jpg" alt="Wedding Showcase 1" style="width: 300px; border-radius: 10px;">
+                <p style="font-family: Cormorant SC;">Weddings are a celebration of love, unity, and the start of a beautiful journey together. At Ivory Luxe, we craft bespoke wedding experiences that blend traditional charm with modern aesthetics. Our expertise in designing breathtaking venues, coordinating seamless ceremonies, and delivering heartfelt moments has made us a trusted partner for countless couples.</p>
+                <img src="pexels-masoodaslami-29624054.jpg" alt="Wedding Showcase 2" style="width: 300px; border-radius: 10px;">
+                <p style="font-family: Cormorant SC;">Experience the magic of extraordinary decor designed with unmatched attention to detail. Every element is thoughtfully curated, blending beauty and precision to create breathtaking settings that captivate the heart and soul.</p>
+            </div>
+        </div>
+        <div class="videos">
+            <video src="" autoplay loop></video>
+            <video src="" autoplay loop></video>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;">Corporate Events</h2>
+        <div class="showcase">
+            <div style="display: flex; align-items: center; gap: 1px;padding: 10px;">
+                <img src="pexels-henri-mathieu-8349232.jpg" alt="Corporate Showcase 1" style="width: 300px; border-radius: 10px;">
+                <p style="font-family: Cormorant SC;">Corporate events require precision, professionalism, and a touch of inspiration. Ivory Luxe specializes in organizing sophisticated corporate gatherings that leave a lasting impression. Whether it's a product launch, an annual gala, or a high-profile meeting, our meticulous planning and creative approach ensure every event achieves its goals with style and grace.</p>
+                <img src="pexels-cottonbro-6535740.jpg" alt="Corporate Showcase 2" style="width: 300px; border-radius: 10px;">
+                <p style="font-family: Cormorant SC;">Transform your corporate events into remarkable experiences with our seamlessly stylish solutions. From sophisticated setups to perfectly organized schedules, we handle every detail to make your professional gatherings truly exceptional.</p>
+            </div>
+        </div>
+        <div class="videos">
+            <video src="" autoplay loop></video>
+            <video src="" autoplay loop></video>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;">Parties</h2>
+        <div class="showcase">
+            <div style="display: flex; align-items: center; gap: 1px;padding: 10px;">
+                <img src="pexels-cottonbro-3171811.jpg" alt="Party Showcase 1" style="width: 300px; border-radius: 10px;">
+                <p style="font-family: Cormorant SC;">Parties are all about joy, laughter, and unforgettable moments. With Ivory Luxe, every party becomes a masterpiece of fun and elegance. From themed birthday celebrations to vibrant cocktail nights, we bring imaginative ideas, vibrant decorations, and an electric atmosphere that keeps the excitement alive all night long.</p>
+                <img src="pexels-steinportraits-2083746.jpg" alt="Party Showcase 2" style="width: 300px; border-radius: 10px;">
+                <p style="font-family: Cormorant SC;">Immerse yourself in a world of vibrant celebrations where every moment is crafted with impeccable style. From dazzling decorations to lively entertainment, we ensure your parties are filled with unforgettable memories that are cherished forever.</p>
+            </div>
+        </div>
+        <div class="videos">
+            <video src="" autoplay loop></video>
+            <video src="" autoplay loop></video>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;">Memorable Highlights</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <img src="1.jpg" alt="Highlight 1">
+                <img src="2.jpg" alt="Highlight 2">
+                <img src="3.jpg" alt="Highlight 3">
+                <img src="4.jpg" alt="Highlight 4">
+                <img src="5.jpg" alt="Highlight 5">
+                <img src="6.jpg" alt="Highlight 6">
+                <img src="7.jpg" alt="Highlight 7">
+                <img src="8.jpg" alt="Highlight 8">
+                <img src="9.jpg" alt="Highlight 9">
+                <img src="10.jpg" alt="Highlight 10">
+                <img src="11.jpg" alt="Highlight 11">
+                <img src="12.jpg" alt="Highlight 12">
+                <img src="13.jpg" alt="Highlight 13">
+                <img src="14.jpg" alt="Highlight 14">
+                <img src="15.jpg" alt="Highlight 15">
+                <img src="16.jpg" alt="Highlight 16">
+                <!-- Duplicate images to ensure seamless loop -->
+                <img src="1.jpg" alt="Highlight 1">
+                <img src="2.jpg" alt="Highlight 2">
+                <img src="3.jpg" alt="Highlight 3">
+                <img src="4.jpg" alt="Highlight 4">
+                <img src="5.jpg" alt="Highlight 5">
+                <img src="6.jpg" alt="Highlight 6">
+                <img src="7.jpg" alt="Highlight 7">
+                <img src="8.jpg" alt="Highlight 8">
+                <img src="9.jpg" alt="Highlight 9">
+                <img src="10.jpg" alt="Highlight 10">
+                <img src="11.jpg" alt="Highlight 11">
+                <img src="12.jpg" alt="Highlight 12">
+                <img src="13.jpg" alt="Highlight 13">
+                <img src="14.jpg" alt="Highlight 14">
+                <img src="15.jpg" alt="Highlight 15">
+                <img src="16.jpg" alt="Highlight 16">
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Back to Top -->
+    <a href="#" id="back-to-top" title="Back to top">Back to top</a>
+
+    <footer>
+        <p style="font-family: Vollkorn;">&copy; 2024 Ivory Luxe | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const backToTop = document.getElementById('back-to-top');
+            if (window.scrollY > 1900) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

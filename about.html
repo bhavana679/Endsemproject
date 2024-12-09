@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgba(236, 236, 234, 0.943);
+            color: #ecf0f1;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(20, 24, 24, 0.527), rgb(0, 0, 0));
+            background-size: 400% 400%;
+            animation: navbargradientAnimation 10s ease infinite;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .navbar a {
+            text-decoration: none;
+        }
+        /* Animation for the gradient */
+        @keyframes navbargradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .navbar .logo h1 {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f1c40f;
+        }
+
+        /* Parallax effect */
+        .parallax {
+            background-image: url('aboutparallax.jpg');
+            height: 100vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .parallax h2 {
+            color: white;
+            font-size: 4rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: 'Herr Von Muellerhoff', sans-serif;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .about h2 {
+            font-size: 50px;
+            text-align: center;
+            color: #333;
+        }
+
+        .about-content {
+            font-family: 'Cormorant SC';
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section {
+            padding: 80px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        /* Initial state for scroll animation */
+        .section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        /* Visible state when scrolled into view */
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        .section img {
+            width: 50%;
+            height: auto;
+            right: 0%;
+            position: relative;
+            z-index: 0;
+            border-radius: 0px;
+        }
+
+        .section-text {
+            width: 45%;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        .section:nth-child(even) .section-text {
+            text-align: left;
+        }
+        .social-logo {
+        width: 30px; /* Adjust to your preferred size */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between image and text */
+        }
+
+        /* Typing Animation */
+        .typing-animation {
+            font-family: 'Tangerine', serif;
+            font-size: 3rem;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(40) 1s forwards, blinkCaret 0.35s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blinkCaret {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(20, 24, 24, 0.527), rgb(0, 0, 0));
+            background-size: 400% 400%;
+            animation: footergradientAnimation 10s ease infinite;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes footergradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Random Image Layout */
+        .slider-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            animation: shuffleImages 5s infinite;
+        }
+
+        .slider-container img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            transition: all 1s ease-in-out;
+        }
+
+        @keyframes shuffleImages {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        
+            <div class="logo">
+                <a href="index.html"><h1 style="font-family: 'Herr Von Muellerhoff', sans-serif;">Ivory Luxe</h1></a>
+            </div>
+            <ul class="nav-links" style="font-family:Cormorant SC ;">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    </header>
+
+    <!-- Parallax Effect Section -->
+    <section class="parallax">
+        <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;color:rgb(30, 32, 35);font-size: 100px;">About Us</h2>
+    </section>
+
+    <!-- About Us Section with Vision, Mission, Values -->
+    <section id="about" class="about">
+        <h2 style="font-family:Tangerine;font-size: 80px">Our Story</h2>
+        <div class="about-content">
+            <div class="section">
+                <div class="section-text">
+                    <h3 style="font-family:Cormorant SC ;color: black; font-size:50px;">Our Vision</h3>
+                    <p style="font-family:Cormorant SC ;color: #333; font-size:20px;">At Ivory Luxe, our vision extends far beyond simply organizing events. We aspire to revolutionize the event planning landscape by creating unparalleled experiences that resonate with the emotions of our clients. Each celebration we curate is a reflection of our unwavering commitment to perfection and creativity. We believe in crafting moments that are not just memorable but truly transformative—bringing dreams to life in ways that leave lasting impressions for years to come.</p>
+                </div>
+                <img src="pexels-evonics-1058277.jpg" alt="Vision">
+            </div>
+            <div class="section">
+                <img src="pexels-cottonbro-4255412.jpg" alt="Mission">
+                <div class="section-text">
+                    <h3 style="font-family:Cormorant SC ;color: black;font-size:50px;">Our Mission</h3>
+                    <p style="font-family:Cormorant SC ;color: #333; font-size:20px;">Our mission is rooted in the art of delivering excellence with a personal touch. We aim to exceed expectations through meticulous planning, innovative solutions, and an unrelenting dedication to quality. Whether it’s a grand celebration or an intimate gathering, every detail is thoughtfully considered to ensure a seamless and unforgettable event. At Ivory Luxe, we are passionate about turning ordinary moments into extraordinary memories that celebrate life’s milestones in style.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-text">
+                    <h3 style="font-family:Cormorant SC ;color: black;font-size:50px;">Our Values</h3>
+                    <p style="font-family:Cormorant SC ;color: #333; font-size:20px;">Integrity, innovation, and client-centric service are the cornerstones of our philosophy. We hold ourselves to the highest standards of ethics and transparency, ensuring every interaction reflects our core principles. Our team thrives on pushing creative boundaries, introducing fresh ideas that redefine possibilities in event planning. Above all, we prioritize our clients, making their visions our mission and their satisfaction our ultimate reward. These values guide us as we strive to leave a positive impact in every endeavor.</p>
+                </div>
+                <img src="pexels-rosario-fernandes-26325-3835638.jpg" alt="Values">
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Typing Animation -->
+    <section class="social-media">
+        <div class="typing-animation" style="color: #333; font-family: Texturina; font-size: 30px;">
+            <span class="social-item">
+                <img src="insta.jpeg" alt="Instagram Logo" class="social-logo"> Follow us on Instagram @ivoryluxe
+            </span> |
+            <span class="social-item">
+                <img src="twitter.jpeg" alt="Twitter Logo" class="social-logo"> Follow us on Twitter @ivoryluxe
+            </span> |
+            <span class="social-item">
+                <img src="pinterest.jpeg" alt="Pinterest Logo" class="social-logo"> Follow us on Pinterest @ivoryluxe
+            </span>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p style="font-family: Vollkorn;">&copy; 2024 Ivory Luxe | All Rights Reserved</p>
+    </footer>
+    
+
+    <script>
+                // Typing Animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const typingElement = document.querySelector(".typing-animation");
+            const text = typingElement.textContent;
+            typingElement.textContent = "";
+
+            let index = 0;
+            function type() {
+                if (index < text.length) {
+                    typingElement.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, 100); // Adjust typing speed here
+                }
+            }
+            type();
+        });
+
+        // Image Shuffle (Random Rotation Effect)
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll(".slider-container img");
+            setInterval(() => {
+                images.forEach((img) => {
+                    const randomRotation = Math.floor(Math.random() * 360);
+                    const randomScale = Math.random() * 0.5 + 0.75; // Scale between 0.75 and 1.25
+                    img.style.transform = `rotate(${randomRotation}deg) scale(${randomScale})`;
+                });
+            }, 3000); // Adjust shuffle interval here
+        });
+
+        // Smooth Scrolling for Navbar Links
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                const targetSection = document.querySelector(this.getAttribute("href"));
+                targetSection.scrollIntoView({
+                    behavior: "smooth",
+                });
+            });
+        });
+        // Scroll Animation for About Section
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".section");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // Stop observing after it's visible
+                    }
+                });
+            }, {
+                threshold: 0.1, // Trigger when 10% of the section is visible
+            });
+
+            sections.forEach((section) => {
+                observer.observe(section);
+            });
+        });
+        window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('.section');
+        
+        sections.forEach(function(section) {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            // If the section is in the viewport, add the 'visible' class
+            if (sectionTop < windowHeight - 150) {
+                section.classList.add('visible');
+            }
+        });
+    });
+
+
+    </script>
+</body>
+</html>
