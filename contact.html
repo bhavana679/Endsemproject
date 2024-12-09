@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ivory Luxe | Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgba(236, 236, 234, 0.943);
+            color: #ecf0f1;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(20, 24, 24, 0.527), rgb(0, 0, 0));
+            background-size: 400% 400%;
+            animation: navbargradientAnimation 10s ease infinite;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .navbar a {
+            text-decoration: none;
+        }
+        /* Parallax Background */
+        .connect-section {
+            background-image: url('pexels-apasaric-2078071.jpg');
+            height: 120vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 0;
+            display: flex; /* Flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        @media (max-width: 768px) {
+            .connect-section {
+                background-attachment: scroll; /* Disable parallax for mobile */
+            }
+        }
+
+        /* Flex Container */
+        .connect-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Connect Text */
+        .connect-text {
+            max-width: 50%;
+            text-align: left;
+            color: #333; 
+
+        }
+        
+
+        /* Image Styling */
+        .connect-image {
+            max-width: 40%;
+            height: auto;
+            border-radius: 0px;
+        }
+        .connect-image-box {
+            background: rgba(255, 255, 255, 0.1); /* Slightly transparent box */
+            padding: 20px;
+            border-radius: 0px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex; /* Flexbox for internal centering */
+            justify-content: space-between; /* Adjust spacing between image and text */
+            align-items: center; /* Center content vertically */
+            width: 60%; /* Increased width to make the container larger */
+            gap: 20px; /* Add spacing between image and text */
+            height: auto; /* Automatically adjust height based on content (default) */
+            min-height: 300px; /* Set a minimum height */
+        }
+
+
+
+        /* Social Icons */
+        .social-icons a img {
+            width: 40px;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Contact Form Section */
+        .contact-form-section {
+            position: relative;
+            overflow: hidden;
+            padding: 50px;
+            color: white;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .form-content {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.396); /* Optional: Light background for better text visibility */
+            padding: 20px;
+            border-radius: 0px;
+        }
+
+
+
+        .contact-form-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-form-section form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form-section input, 
+        .contact-form-section textarea {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form-section button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .contact-form-section button:hover {
+            color: #fffbfbb9;
+            border: 1px solid #000;
+            transition: all 0.3s ease;
+            background-color: #f6f9ba;
+            transform: scale(1.1);
+        }
+
+
+        /* Appointment Section */
+        .appointment-section {
+            display: flex;
+            align-items: center;
+            padding: 60px 20px 60px 0px;
+            background-color: #000;
+        }
+
+        .appointment-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 650px;
+
+        }
+
+        .appointment-image img {
+            max-width: 100%;
+            width: 75%;
+            height: 650px%;
+            border-radius: 0px;
+        }
+        /* Initial state for the roll-out effect */
+        .roll-out-image {
+            position: relative;
+            max-width: 100%;
+            width: 0; /* Start with zero width */
+            height: 80%;
+            border-radius: 0px;
+            transition: width 1.5s ease-out; /* Smooth transition effect */
+        }
+
+        /* Final state when the image is visible */
+        .roll-out-image.visible {
+            width: 75%; /* Final width after animation */
+        }
+
+
+        .appointment-text h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .appointment-text p {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 0px;
+            background-color: #dbe2eaac;
+            color: rgb(27, 25, 25);
+            padding: 5px 5px;
+            border-radius: 0%;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.417);
+            font-size: 10px;
+            display: none;
+            z-index: 1000;
+        }
+
+        #back-to-top:hover {
+            background-color: #d6bd42;
+        }
+        #map-container {
+            margin: 20px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><h1 style="font-family: 'Herr Von Muellerhoff', sans-serif;">Ivory Luxe</h1></a>
+            </div>
+            <ul class="nav-links" style="font-family:Cormorant SC ;">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Let's Connect Section -->
+    <section class="connect-section" style="background-image: url('pexels-apasaric-2078071.jpg');">
+        <div class="connect-container">
+            <!-- Connect Image in a Box -->
+            <div class="connect-image-box">
+                <img src="images/pexels-apasaric-2078071.jpg" alt="Connect" class="connect-image">
+                <div class="connect-text">
+                    <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;color: aliceblue;">Let's Connect</h2>
+                    <p style="font-family:Cormorant SC;color: aliceblue;padding-bottom: 20px;">We'd love to hear from you! Connect with us and share your thoughts, feedback, or questions on our social channels. We're always here to listen and engage!</p>
+                    <div class="social-icons">
+                        <a href="https://pinterest.com" target="_blank"><img src="images/pinterest.svg" alt="Pinterest"></a>
+                        <a href="https://twitter.com" target="_blank"><img src="images/twitter.svg" alt="Twitter"></a>
+                        <a href="https://instagram.com" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <!-- Background Video -->
+        <div class="video-container">
+            <video autoplay muted loop class="background-video">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Form Content -->
+        <div class="form-content" >
+            <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif; color: rgb(211, 201, 201);text-align: center;">Contact Us</h2>
+            <form action="https://formsubmit.co/your-email@example.com" method="POST" style="font-family:Cormorant SC; color: rgb(211, 201, 201);">
+                <label for="source" style="font-family:Cormorant SC;">Where did you hear about us? *</label>
+                <input type="text" id="source" name="source" placeholder="Enter source" style="font-family:Cormorant SC;" required>
+
+                <label for="email" style="font-family:Cormorant SC;">Email *</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" style="font-family:Cormorant SC;" required>
+
+                <label for="first-name" style="font-family:Cormorant SC;">First Name *</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" style="font-family:Cormorant SC;" required>
+
+                <label for="last-name" style="font-family:Cormorant SC;">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" style="font-family:Cormorant SC;" required>
+
+                <label for="phone" style="font-family:Cormorant SC;">Phone *</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" style="font-family:Cormorant SC;" required>
+
+                <label for="reserved-venue" style="font-family:Cormorant SC;">Have you reserved a venue yet? *</label>
+                <input type="text" id="reserved-venue" name="reserved-venue" placeholder="Yes/No" style="font-family:Cormorant SC;" required>
+
+                <label for="event-date" style="font-family:Cormorant SC;">Event Date *</label>
+                <input type="date" id="event-date" name="event-date" style="font-family:Cormorant SC;" required>
+
+                <label for="venue-name" style="font-family:Cormorant SC;">Venue Name *</label>
+                <input type="text" id="venue-name" name="venue-name" placeholder="Venue name" style="font-family:Cormorant SC;" required>
+
+                <label for="venue-location" style="font-family:Cormorant SC;">Venue Location *</label>
+                <input type="text" id="venue-location" name="venue-location" placeholder="Venue location" style="font-family:Cormorant SC;" required>
+
+                <label for="city" style="font-family:Cormorant SC;">City *</label>
+                <input type="text" id="city" name="city" placeholder="Enter city" style="font-family:Cormorant SC;" required>
+
+                <label for="state" style="font-family:Cormorant SC;">State/Province *</label>
+                <input type="text" id="state" name="state" placeholder="Enter state/province" style="font-family:Cormorant SC;" required>
+
+                <label for="celebration" style="font-family:Cormorant SC;">What are you celebrating? *</label>
+                <select id="celebration" name="celebration" style="font-family:Cormorant SC;" required>
+                    <option value="wedding" style="font-family:Cormorant SC;">Wedding</option>
+                    <option value="party" style="font-family:Cormorant SC;">Party/Social Event</option>
+                    <option value="corporate" style="font-family:Cormorant SC;">Corporate Event</option>
+                    <option value="public" style="font-family:Cormorant SC;">Public Event</option>
+                </select><br><br>
+
+                <label for="guests" style="font-family:Cormorant SC;">How many guests are you wanting to party with? *</label>
+                <input type="number" id="guests" name="guests" placeholder="Number of guests" style="font-family:Cormorant SC;" required>
+
+                <label for="additional-service" style="font-family:Cormorant SC;">What additional service are you interested in?</label>
+                <select id="additional-service" name="additional-service" style="font-family:Cormorant SC;">
+                    <option value="rehearsal-dinner">Rehearsal Dinner Planning</option>
+                    <option value="end-of-night">End of Night Pack + Breakdown of My Event</option>
+                    <option value="post-event-farewell">Post Event Farewell</option>
+                    <option value="pre-event-welcome">Pre-event Welcome Event</option>
+                </select><br><br>
+
+                <label for="message" style="font-family:Cormorant SC;">Tell us how we can help you most. (Message) *</label>
+                <textarea id="message" name="message" placeholder="Your message" style="font-family:Cormorant SC;" required></textarea>
+
+                <button type="submit" style="font-family:Cormorant SC; display: block; margin: 0 auto; text-align: center;background-color: rgba(240, 255, 255, 0.05);">Submit</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- Appointment Section -->
+    <section class="appointment-section">
+        <div class="appointment-container">
+            <div class="appointment-image">
+                <img src="images/pexels-pavel-danilyuk-6405665.jpg" alt="Appointment" class="roll-out-image">
+            </div>
+            
+            <div class="appointment-text" style="color: #e0d2d2;">
+                <h2 style="font-family:Tangerine">Never Done an Appointment Before?</h2>
+                <p style="font-family:Cormorant SC ;">Click below to learn more about our services and how we can help make your event unforgettable.</p>
+                <a href="#services" class="cta-link" style="font-family:Cormorant SC ;background-color: #fff;color: #333;">Explore Services</a>
+            </div>
+        </div>
+    </section>
+    <section class="map" style="display: flex; align-items: center; gap: 20px; margin: 50px;">
+        <!-- Map Container -->
+        <div id="map-container" style="flex: 1;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2047.4509349809894!2d73.91220539922936!3d18.611875197089557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1733628697997!5m2!1sen!2sin" 
+                width="920" 
+                height="600" 
+                style="border:0; border-radius: 10px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        
+        <!-- Text Description -->
+        <div class="map-description" style="flex: 0.5; text-align: left;">
+            <h2 style="margin: 0 0 20px; font-size: 44px; color: #333;font-family: Tangerine;">Want to know where we're located?</h2>
+            <p style="font-size: 18px; line-height: 1.6; color: #555;font-family: Cormorant SC;">
+                Explore our company's location using the interactive map on the left! 
+                We look forward to welcoming you to our office. Don't hesitate to reach out if you need further directions.
+            </p>
+        </div>
+    </section>
+    
+      
+    <a href="#" id="back-to-top" title="Back to top">Back to top</a>
+
+    <footer>
+        <p style="font-family: Vollkorn;">&copy; 2024 Ivory Luxe | All Rights Reserved</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const image = document.querySelector(".roll-out-image");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        image.classList.add("visible"); // Add class when in view
+                    } else {
+                        image.classList.remove("visible"); // Reset when out of view (optional)
+                    }
+                });
+            },
+            { threshold: 0.1 } // Trigger when 10% of the image is in view
+        );
+
+        observer.observe(image);
+        });
+        window.addEventListener('scroll', function () {
+        const backToTop = document.getElementById('back-to-top');
+        if (window.scrollY > 1900){
+            backToTop.style.display = 'block';
+        } else {
+            backToTop.style.display = 'none';
+        }
+        });
+
+
+    </script>
+
+</body>
+</html>
