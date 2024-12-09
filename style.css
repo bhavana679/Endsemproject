@@ -1,0 +1,421 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color:rgba(236, 236, 234, 0.943);
+    color: #ecf0f1;
+  }
+  
+  /* Header Styling */
+  header {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+/* Navbar with transparent animated gradient */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(20, 24, 24, 0.527), rgb(0, 0, 0));
+    background-size: 400% 400%;
+    animation: navbargradientAnimation 10s ease infinite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for the gradient */
+@keyframes navbargradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  .navbar .logo h1 {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f1c40f;
+  }
+  
+  .hero {
+    padding-top: 120px;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .cta-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the buttons */
+    align-items: center; /* Vertically centers the buttons */
+    height: 100%; /* Ensure full height for proper alignment */
+  }
+  
+  .cta-btn {
+    background-color: #f1edded7;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background-color: #f6f9ba;
+    transform: scale(1.1);
+  }
+  
+  /* Image Slider */
+  .slider {
+    position: relative;
+    margin: 0 auto; /* Centers the slider horizontally */
+    overflow: hidden;
+  }
+  
+  .slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider-images {
+    display: flex;
+    justify-content: center; /* Ensures images are centered inside the slider */
+    height: 100%; /* Makes it fill the full height of the container */
+  }
+  
+  .slide {
+    width: 90%; /* Keeps each slide at a third of the container width */
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the slide without distortion */
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+  /* Services Section */
+  .services, .portfolio, .testimonials, .contact {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+/* Services Section Styling */
+.services {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Each Service Card Styling */
+  .service-card {
+    background-color:rgba(236, 236, 234, 0.943);
+    color: #0f1011;
+    margin: 20px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 80%; /* Larger size for cards */
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .service-card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .service-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  /* Hover Effect */
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Animation to Display One Card at a Time */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .service-card {
+    animation: slideIn 1.5s ease-in-out;
+  }
+  
+  .portfolio-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .portfolio-item {
+    position: relative;
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .portfolio-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Testimonials Section */
+  .testimonial {
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker for stronger contrast */
+    padding: 50px; /* Spacious layout */
+    margin: 20px auto; /* Center-align horizontally with auto margin */
+    border-radius: 12px; /* Softer border rounding for aesthetics */
+    display: inline-block;
+    width: 70%; /* Broad width for content */
+    height: auto; /* Flexible height */
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    backdrop-filter: blur(5px); /* Add a frosted-glass effect */
+    color: #f5f5f5; /* Light text for contrast */
+  }
+  .testimonial img {
+    border-radius: 50%;
+    width: 800px; /* Increased image size */
+    height: 800px; /* Increased image height */
+    object-fit: cover; /* Maintain aspect ratio with cropping */
+    margin-bottom: 30px; /* Increase spacing below the image */
+  }
+  
+  
+  .testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial span {
+    font-weight: bold;
+  }
+  
+/* Contact Form Container */
+.contact {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(52, 73, 94, 0.8)), 
+                url('pexels-jonathanborba-25916404.jpg') center/cover no-repeat; /* Replace with your image URL */
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Contact Form */
+  .contact form {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Deeper shadow for a bold look */
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff; /* Ensure text remains visible on the dark background */
+  }
+  
+  /* Form Inputs and Textareas */
+  .contact input, .contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #bdc3c7;
+    font-size: 1rem;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+  }
+  
+  .contact input:focus, .contact textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.8);
+  }
+  
+  /* Submit Button */
+  .contact button {
+    width: 100%;
+    padding: 15px;
+    background-color: #d8cdcd;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #f6f9ba;
+    transform: scale(1.1);
+  }
+  
+  /* Section Title */
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif; /* Add elegance with Google Font */
+    color: #c7c6c4;
+  }
+  
+  /* Form Labels */
+  .contact label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #2c3e50;
+  }
+  
+  /* Add Subtle Glow */
+  .contact form:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  
+/* Footer Styling */
+footer {
+  background: linear-gradient(45deg, #2c3e50, #34495e, #2c3e50);
+  background-size: 400% 400%; /* Expand for smooth animation */
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(20, 24, 24, 0.527), rgb(0, 0, 0));
+  background-size: 400% 400%;
+  animation: footergradientAnimation 10s ease infinite;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient Animation */
+@keyframes footergradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  footer p {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .service-card, .portfolio-item, .testimonial {
+      width: 100%;
+    }
+  
+    .slider-container {
+      flex-direction: column;
+    }
+  }
+  
+  
