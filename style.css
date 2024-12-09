@@ -296,9 +296,9 @@
   }
   
 /* Contact Form Container */
-.contact {
+  .contact {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(52, 73, 94, 0.8)), 
-                url('pexels-jonathanborba-25916404.jpg') center/cover no-repeat; /* Replace with your image URL */
+                url('images/pexels-jonathanborba-25916404.jpg') center/cover no-repeat; /* Replace with your image URL */
     padding: 60px 20px;
     color: #fff;
     text-align: center;
