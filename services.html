@@ -31,7 +31,7 @@
             padding: 0;
         }
 
-        /* Navbar */ 
+
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -49,7 +49,7 @@
             text-decoration: none;
         }
 
-        /* Services Section */
+
         #services {
             padding: 80px 20px;
             text-align: center;
@@ -105,7 +105,7 @@
         .service-card button:hover {
             background-color: #dccfa0d7;
         }
-        /* Back to Top */
+
         #back-to-top {
             position: fixed;
             bottom: 20px;
@@ -123,7 +123,7 @@
         #back-to-top:hover {
             background-color: #dccfa0d7;
         }
-        /* Scroll Animations */
+
         [data-scroll] {
             opacity: 0;
             transform: translateY(20px);
@@ -133,7 +133,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Pricing */
+
         .pricing-plan {
             display: flex;
             flex-direction: column;
@@ -148,8 +148,8 @@
             font-family: 'Cormorant SC', serif;
         }
         .pricing-plan button {
-            margin-top: 15px; /* Pushes the button to the bottom */
-            align-self: center; /* Centers the button horizontally */
+            margin-top: 15px; 
+            align-self: center; 
             padding: 10px 20px; 
             background-color: #000000; 
             color: white; 
@@ -161,17 +161,17 @@
             
         }
         .pricing-plan button:hover {
-            background-color: #dccfa0; /* Change this to your desired hover color */
+            background-color: #dccfa0; 
         }
         .faq-item button{
-            margin-top: auto; /* Pushes the button to the bottom */
-            align-self: center; /* Centers the button horizontally */
+            margin-top: auto; 
+            align-self: center; 
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             font-family: Tangerine;
-            font-size: 30px; /* Increase font size */
-            padding: 20px; /* Add more padding for a larger button */
-            line-height: 1.5; /* Improve readability */
+            font-size: 30px; 
+            padding: 20px; 
+            line-height: 1.5; 
             width: 600px;
 
         }
@@ -179,10 +179,10 @@
             background: rgba(255, 255, 255, 0.8);
             padding: 10px;
             border-radius: 5px;
-            font-size: 22px; /* Increase font size for answers */
-            line-height: 1.8; /* Improve readability */
-            color: #333; /* Ensure good contrast for visibility */
-            margin: 15px 0; /* Add spacing around the text */
+            font-size: 22px; 
+            line-height: 1.8; 
+            color: #333; 
+            margin: 15px 0; 
                 }
 
         /* FAQ */
@@ -234,14 +234,14 @@
         .faq {
             position: relative;
             z-index: 2;
-            background-color: rgba(255, 255, 255, 0.8); /* Optional overlay for readability */
+            background-color: rgba(255, 255, 255, 0.8); 
             padding: 40px;
             border-radius: 10px;
         }
-        /* FAQ Container */
+
         .faq-container {
-            text-align: center; /* Centers text inside the container */
-            margin: 0 auto; /* Centers the container itself */
+            text-align: center; 
+            margin: 0 auto; 
         }
 
 
@@ -250,7 +250,7 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+
     <header class="header">
         <nav class="navbar">
             <div class="logo">
@@ -267,32 +267,32 @@
         </nav>
     </header>
 
-    <!-- Services Section -->
+
     <section id="services" style="background: url('images/i26.png') no-repeat center center/cover; height: 100vh; width: 100%;">
         <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;color: #ffffff;">Our Services</h2>
         <div class="service-container">
-            <!-- Event Consultation -->
+
             <div class="service-card">
                 <img src="images/i13.png" alt="Event Consultation">
                 <h3 style="color: rgb(0, 0, 0);">Event Consultation</h3>
                 <p class="hidden-text" style="color:#000000;">Get expert advice and consultation for your event. We guide you step-by-step to ensure every detail is perfect.</p>
                 <button style="font-family: Texturina;"onclick="toggleText(this)">Learn More</button>
             </div>
-            <!-- Venue Selection -->
+
             <div class="service-card">
                 <img src="images/i14.png" alt="Venue Selection">
                 <h3 style="color: rgb(0, 0, 0);">Venue Selection</h3>
                 <p class="hidden-text" style="color:#000000;">Choose the perfect venue with our curated options. Whether it’s a grand hall or an intimate space, we’ve got it covered.Time for you to explore the best!</p>
                 <button style="font-family: Texturina;" onclick="toggleText(this)">Learn More</button>
             </div>
-            <!-- Event Theme & Decor -->
+
             <div class="service-card">
                 <img src="images/i16.png" alt="Event Theme & Decor">
                 <h3 style="color: rgb(0, 0, 0);">Event Theme & Decor</h3>
                 <p class="hidden-text" style="color:#000000;">Transform your vision into reality with unique themes and elegant decor tailored to your preferences.</p>
                 <button style="font-family: Texturina;"onclick="toggleText(this)">Learn More</button>
             </div>
-            <!-- Catering Services -->
+
             <div class="service-card">
                 <img src="images/i15.png" alt="Catering Services">
                 <h3 style="color: rgb(0, 0, 0);">Catering Services</h3>
@@ -301,11 +301,11 @@
             </div>
         </div>
     </section>
-    <!-- Updated Section: Pricing -->
+
     <section id="pricing" class="pricing" style="padding: 60px 20px; background: url('images/i22.png') no-repeat center center/cover; height: 100vh; width: 100%;">
         <h2 class="section-title" style="font-size: 36px; text-align: center; color: aliceblue; margin-bottom: 40px;font-family:'Cormorant SC';">Pricing</h2>
         <div class="pricing-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <!-- Basic Package -->
+    
             <div class="pricing-plan" style="width: 300px; border: 1px solid #ddd; border-radius: 10px; background-color: rgba(255, 255, 255, 0.666); padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
                 <h3 style="font-size: 24px; color: #444;">Basic Package</h3>
                 <p style="font-size: 18px; margin: 10px 0; color: #666;">$1000</p>
@@ -317,7 +317,7 @@
                 </ul>
                 <button >Select Package</button>
             </div>
-            <!-- Premium Package -->
+
             <div class="pricing-plan" style="width: 300px; border: 1px solid #ddd; border-radius: 10px; background-color: rgba(255, 255, 255, 0.666); padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
                 <h3 style="font-size: 24px; color: #444;">Premium Package</h3>
                 <p style="font-size: 18px; margin: 10px 0; color: #666;">$2000</p>
@@ -329,7 +329,7 @@
                 </ul>
                 <button >Select Package</button>
             </div>
-            <!-- Luxury Package -->
+
             <div class="pricing-plan" style="width: 300px; border: 1px solid #ddd; border-radius: 10px; background-color: rgba(255, 255, 255, 0.666); padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
                 <h3 style="font-size: 24px; color: #444;">Luxury Package</h3>
                 <p style="font-size: 18px; margin: 10px 0; color: #666;">$5,000</p>
@@ -341,7 +341,7 @@
                 </ul>
                 <button >Select Package</button>
             </div>
-            <!-- Exclusive Package -->
+
             <div class="pricing-plan" style="width: 300px; border: 1px solid #ddd; border-radius: 10px; background-color: rgba(255, 255, 255, 0.666); padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
                 <h3 style="font-size: 24px; color: #444;">Exclusive Package</h3>
                 <p style="font-size: 18px; margin: 10px 0; color: #666;">$10,000</p>
@@ -359,7 +359,7 @@
 
     <section id="faq" class="faq" style="padding: 60px 20px; position: relative; overflow: hidden; height: 100vh;">
         <div class="faq-container">
-        <!-- Background Video -->
+
         <div class="video-container">
             <video autoplay muted loop class="background-video">
                 <source src="images/p.mp4" type="video/mp4">
@@ -387,10 +387,10 @@
     
 
 
-    <!-- Back to Top -->
+
     <a href="#" id="back-to-top" title="Back to top">Back to top</a>
 
-    <!-- Footer -->
+
     <footer>
         <p style="font-family: 'Vollkorn', serif;">&copy; 2024 Ivory Luxe | All Rights Reserved</p>
     </footer>
@@ -413,7 +413,7 @@
                 backToTop.style.display = 'none';
             }
         });
-        // Scroll Animation
+  
         const elements = document.querySelectorAll('[data-scroll]');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {

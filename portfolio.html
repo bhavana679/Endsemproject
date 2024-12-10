@@ -23,22 +23,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Basic Reset */
+
     .showcase-item {
         display: flex;
-        gap: 20px; /* Space between the image and text */
+        gap: 20px; 
         padding: 20px;
-        background: #f5f5dc9c; /* Light beige tone */
+        background: #f5f5dc9c; 
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
-        align-items: stretch; /* Ensures both image and text occupy the same height */
+        align-items: stretch; 
     }
 
     .showcase-item img {
-        flex: 1; /* Makes the image occupy equal space as text */
-        max-width: 100%; /* Ensures responsiveness */
-        height: auto; /* Maintains aspect ratio */
+        flex: 1;  
+        max-width: 100%; 
+        height: auto;
         border-radius: 10px;
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
@@ -49,7 +49,7 @@
     }
 
     .showcase-item p {
-        flex: 1; /* Makes the text occupy equal space as the image */
+        flex: 1; 
         font-family: 'Cormorant SC', serif;
         font-size: 18px;
         color: #333;
@@ -59,8 +59,8 @@
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         display: flex;
-        align-items: center; /* Vertically centers the text */
-        justify-content: center; /* Ensures balanced text alignment */
+        align-items: center; 
+        justify-content: center; 
         text-align: justify;
     }
         * {
@@ -69,7 +69,7 @@
             box-sizing: border-box;
         }
 
-        /* Global Styles */
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: rgba(236, 236, 234, 0.943);
@@ -80,7 +80,7 @@
             font-size: 70px;
         }
 
-        /* Navbar */
+
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -98,7 +98,7 @@
             text-decoration: none;
         }
 
-        /* Portfolio Sections */
+
         .section {
             padding: 50px;
             text-align: center;
@@ -152,8 +152,8 @@
 
         .slider {
             display: flex;
-            width: calc(400px * 32 + 40px * 31); /* Total width for all images, including duplicates */
-            animation: slide 20s linear infinite; /* Slow down animation duration for smoother effect */
+            width: calc(400px * 32 + 40px * 31); 
+            animation: slide 20s linear infinite; 
         }
 
         .slider img {
@@ -164,12 +164,12 @@
 
         @keyframes slide {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* Moves the slider left by 50% of its total width */
+            100% { transform: translateX(-50%); } 
         }
 
 
 
-        /* Back to Top */
+
         #back-to-top {
             position: fixed;
             bottom: 20px;
@@ -194,7 +194,7 @@
 </head>
 
 <body>
-    <!-- Header -->
+
     <header class="header">
         <nav class="navbar">
             <div class="logo">
@@ -211,7 +211,7 @@
         </nav>
     </header>
 
-    <!-- Portfolio Content -->
+
     <section class="section" style="background-image: url('images/i22.png'); width: 100%; height: 100vh;">
         <h2 style="font-family:  'Herr Von Muellerhoff', sans-serif; color: #ffffff;">Astonishing Works</h2>
         <p style="font-family: Cormorant SC;font-size: 30px; color: #ffffff;">Ivory Luxe has consistently pushed the boundaries of creativity and innovation, turning ordinary events into extraordinary experiences. From curating elegant themes to executing every detail flawlessly, our work has left an indelible mark on countless occasions. Explore our writings to uncover the passion and dedication that drive us to create timeless memories.</p>
@@ -274,7 +274,7 @@
                 <img src="images/14.jpg" alt="Highlight 14">
                 <img src="images/15.jpg" alt="Highlight 15">
                 <img src="images/16.jpg" alt="Highlight 16">
-                <!-- Duplicate images to ensure seamless loop -->
+
                 <img src="images/1.jpg" alt="Highlight 1">
                 <img src="images/2.jpg" alt="Highlight 2">
                 <img src="images/3.jpg" alt="Highlight 3">
@@ -296,7 +296,7 @@
     </section>
     
 
-    <!-- Back to Top -->
+
     <a href="#" id="back-to-top" title="Back to top">Back to top</a>
 
     <footer>

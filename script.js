@@ -1,4 +1,4 @@
-// Smooth scrolling for anchor links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact form validation
+
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -25,12 +25,10 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     }
 });
 
-// JavaScript for any dynamic functionality, if required
 document.addEventListener("DOMContentLoaded", function() {
-    // Optional: Add event listeners or other dynamic functionality
+   
 });
 
-// Slider auto-transition functionality (can be adjusted as needed)
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
