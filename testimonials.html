@@ -106,7 +106,7 @@
 
         .testimonial-card img {
             display: block;
-            margin: 0 auto 10px; /* Auto centers horizontally */
+            margin: 0 auto 10px; 
             width: 100px;
             height: 100px;
             border-radius: 50%;
@@ -133,9 +133,9 @@
             color: #f5c518;
             font-size: 1rem;
             margin-bottom: 10px;
-            text-align: center; /* Ensures the text within is centered */
+            text-align: center; 
             display: flex;
-            justify-content: center; /* Centers content inside the flex container */
+            justify-content: center;
             padding-left: 40px;
         }
 
@@ -200,12 +200,11 @@
             background-color: #bba632;
         }
 
-        /* Call to Action */
         .cta {
             text-align: center;
             margin-top: 40px;
         }
-        /* Featured Testimonial */
+
         .featured-testimonial {
             text-align: center;
             margin: 40px 0;
@@ -238,7 +237,7 @@
         .cta a:hover {
             background: #bba632;
         }
-        /* Back to Top */
+
         #back-to-top {
             position: fixed;
             bottom: 20px;
@@ -267,7 +266,7 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+
     <header class="header">
         <nav class="navbar">
             <div class="logo">
@@ -289,7 +288,7 @@
         <p style="font-family: 'Cormorant SC', serif; color: #f7f7f7;">At Ivory Luxe, we value the trust and love of our clients. <br>Here's what they have to say about their experiences with us.</p>
     </section>
 
-    <!-- Testimonials Section -->
+
     <section style="padding-top:30px ;background-image: url('images/WhatsApp\ Image\ 2024-12-10\ at\ 9.19.14\ PM.jpeg');">
         <div class="testimonial-section">
             <h2  style="font-family: 'Herr Von Muellerhoff', sans-serif;font-size: 60px;">Weddings</h2>
@@ -316,7 +315,7 @@
         </div>
     </section>
 
-        <!-- Corporate Section -->
+
     <section style="background-image: url('images/WhatsApp\ Image\ 2024-12-10\ at\ 9.19.14\ PM.jpeg');">
         <div class="testimonial-section">
             <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;font-size: 60px;">Corporate Events</h2>
@@ -343,7 +342,7 @@
         </div>
     </section>
 
-        <!-- Parties Section -->
+
     <section style="background-image: url('images/WhatsApp\ Image\ 2024-12-10\ at\ 9.19.14\ PM.jpeg');">
         <div class="testimonial-section">
             <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;font-size: 60px;">Parties</h2>
@@ -373,7 +372,7 @@
     <section style="width: 100%;height: auto;">
         <div class="testimonial-section submit-section" style="position: relative; overflow: hidden;">
         
-            <!-- Testimonial Form Section -->
+
             <div class="form-container" style="font-family: Cormorant SC; background: rgba(255, 255, 255, 0.075); padding: 20px; border-radius: 8px;">
                 <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif; font-size: 60px;color: rgb(0, 0, 0);">Submit Your Testimonial</h2>
                 <form id="testimonialForm" style="width: 500px; height: 500px;" action="https://formsubmit.co/birajitsaikia@gmail.com" method="POST" onsubmit="showSuccessMessage(event)">
@@ -394,7 +393,7 @@
                     <button type="submit">Submit</button>
                 </form>
                 
-                <!-- Success Message -->
+
                 <p id="successMessage" style="display: none; color: rgb(248, 248, 248); font-family: Cormorant SC; margin-top: 20px;">Success! Thank you for your testimonial! </p>
             </div>
         </div>
@@ -402,7 +401,7 @@
     
     
 
-    <!-- Back to Top -->
+
     <a href="#" id="back-to-top" title="Back to top">Back to top</a>
 
     <footer>
@@ -453,18 +452,18 @@
             document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
         });
         function showSuccessMessage(event) {
-            event.preventDefault(); // Prevent the default form submission
-            // Show the success message
+            event.preventDefault(); 
+
             document.getElementById('successMessage').style.display = 'block';
             
-            // Optionally, reset the form
+
             document.getElementById('testimonialForm').reset();
             
-            // Simulate submission to the email (FormSubmit handles it)
+
             setTimeout(() => {
-                // Automatically submit the form after success message is shown
+
                 document.getElementById('testimonialForm').submit();
-            }, 2000); // Adjust the time delay (in ms) if needed
+            }, 2000); 
         }
 
     </script>

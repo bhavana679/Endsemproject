@@ -1,18 +1,18 @@
-/* Basic Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Global Styles */
+
   body {
     font-family: 'Poppins', sans-serif;
     background-color:rgba(236, 236, 234, 0.943);
     color: #ecf0f1;
   }
   
-  /* Header Styling */
+
   header {
     background: url('hero-image.jpg') no-repeat center center/cover;
     color: white;
@@ -20,7 +20,7 @@
     text-align: center;
   }
   
-/* Navbar with transparent animated gradient */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -36,7 +36,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Animation for the gradient */
+
 @keyframes navbargradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -85,9 +85,9 @@
   }
   .cta-container {
     display: flex;
-    justify-content: center; /* Horizontally centers the buttons */
-    align-items: center; /* Vertically centers the buttons */
-    height: 100%; /* Ensure full height for proper alignment */
+    justify-content: center; 
+    align-items: center;
+    height: 100%; 
   }
   
   .cta-btn {
@@ -109,7 +109,7 @@
   /* Image Slider */
   .slider {
     position: relative;
-    margin: 0 auto; /* Centers the slider horizontally */
+    margin: 0 auto; 
     overflow: hidden;
   }
   
@@ -121,14 +121,13 @@
   
   .slider-images {
     display: flex;
-    justify-content: center; /* Ensures images are centered inside the slider */
-    height: 100%; /* Makes it fill the full height of the container */
-  }
+    justify-content: center; 
+    height: 100%; 
   
   .slide {
-    width: 90%; /* Keeps each slide at a third of the container width */
+    width: 90%; 
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the slide without distortion */
+    object-fit: cover; 
   }
   
   .slide img {
@@ -148,7 +147,7 @@
     padding: 10px 20px;
     border-radius: 5px;
 }
-  /* Services Section */
+
   .services, .portfolio, .testimonials, .contact {
     padding: 60px 20px;
     text-align: center;
@@ -160,17 +159,17 @@
     font-weight: 600;
   }
   
-/* Services Section Styling */
+
 .services {
     display: flex;
-    flex-direction: column; /* Stack cards vertically */
+    flex-direction: column; 
     align-items: center;
     overflow: hidden;
     padding: 20px;
     position: relative;
   }
   
-  /* Each Service Card Styling */
+
   .service-card {
     background-color:rgba(236, 236, 234, 0.943);
     color: #0f1011;
@@ -179,7 +178,7 @@
     border-radius: 12px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 80%; /* Larger size for cards */
+    width: 80%; 
     transition: transform 0.3s;
     display: flex;
     flex-direction: column;
@@ -203,12 +202,12 @@
     margin-top: 20px;
   }
   
-  /* Hover Effect */
+
   .service-card:hover {
     transform: scale(1.05);
   }
   
-  /* Animation to Display One Card at a Time */
+
   @keyframes slideIn {
     0% {
       transform: translateX(100%);
@@ -263,26 +262,26 @@
     border-radius: 5px;
   }
   
-  /* Testimonials Section */
+
   .testimonial {
-    background-color: rgba(240, 235, 235, 0); /* Slightly darker for stronger contrast */
-    padding: 50px; /* Spacious layout */
-    margin: 20px auto; /* Center-align horizontally with auto margin */
-    border-radius: 12px; /* Softer border rounding for aesthetics */
+    background-color: rgba(240, 235, 235, 0); 
+    padding: 50px; 
+    margin: 20px auto; 
+    border-radius: 12px; 
     display: inline-block;
-    width: 70%; /* Broad width for content */
-    height: auto; /* Flexible height */
+    width: 70%; 
+    height: auto; 
     text-align: center;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
-    backdrop-filter: blur(5px); /* Add a frosted-glass effect */
-    color: #f5f5f5; /* Light text for contrast */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px);
+    color: #f5f5f5; 
   }
   .testimonial img {
     border-radius: 50%;
-    width: 800px; /* Increased image size */
-    height: 800px; /* Increased image height */
-    object-fit: cover; /* Maintain aspect ratio with cropping */
-    margin-bottom: 30px; /* Increase spacing below the image */
+    width: 800px; 
+    height: 800px; 
+    object-fit: cover; 
+    margin-bottom: 30px; 
   }
   
   
@@ -295,27 +294,27 @@
     font-weight: bold;
   }
   
-/* Contact Form Container */
+
   .contact {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(52, 73, 94, 0.8)), 
-                url('images/pexels-jonathanborba-25916404.jpg') center/cover no-repeat; /* Replace with your image URL */
+                url('images/pexels-jonathanborba-25916404.jpg') center/cover no-repeat; 
     padding: 60px 20px;
     color: #fff;
     text-align: center;
   }
   
-  /* Contact Form */
+
   .contact form {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 50px;
     border-radius: 15px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Deeper shadow for a bold look */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); 
     max-width: 600px;
     margin: 0 auto;
-    color: #fff; /* Ensure text remains visible on the dark background */
+    color: #fff; 
   }
   
-  /* Form Inputs and Textareas */
+
   .contact input, .contact textarea {
     width: 100%;
     padding: 15px;
@@ -334,7 +333,7 @@
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.8);
   }
   
-  /* Submit Button */
+
   .contact button {
     width: 100%;
     padding: 15px;
@@ -353,15 +352,15 @@
     transform: scale(1.1);
   }
   
-  /* Section Title */
+
   .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    font-family: 'Playfair Display', serif; /* Add elegance with Google Font */
+    font-family: 'Playfair Display', serif; 
     color: #c7c6c4;
   }
   
-  /* Form Labels */
+
   .contact label {
     font-size: 1rem;
     font-weight: bold;
@@ -371,7 +370,7 @@
     color: #2c3e50;
   }
   
-  /* Add Subtle Glow */
+
   .contact form:hover {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
   }
@@ -380,7 +379,7 @@
 /* Footer Styling */
 footer {
   background: linear-gradient(45deg, #2c3e50, #34495e, #2c3e50);
-  background-size: 400% 400%; /* Expand for smooth animation */
+  background-size: 400% 400%; 
   color: #ecf0f1;
   text-align: center;
   padding: 20px;
@@ -390,7 +389,7 @@ footer {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Gradient Animation */
+
 @keyframes footergradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -418,10 +417,10 @@ footer {
     }
   }
   .service-card-link {
-      text-decoration: none; /* Removes the underline */
-      color: inherit;       /* Ensures the text color remains unchanged */
+      text-decoration: none; 
+      color: inherit;      
   }
   .portfolio-item-link {
-    text-decoration: none; /* Removes underline */
-    color: inherit;       /* Ensures text color is unchanged */
+    text-decoration: none;
+    color: inherit;      
   }
