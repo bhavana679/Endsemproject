@@ -265,7 +265,7 @@
   
   /* Testimonials Section */
   .testimonial {
-    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker for stronger contrast */
+    background-color: rgba(240, 235, 235, 0); /* Slightly darker for stronger contrast */
     padding: 50px; /* Spacious layout */
     margin: 20px auto; /* Center-align horizontally with auto margin */
     border-radius: 12px; /* Softer border rounding for aesthetics */
