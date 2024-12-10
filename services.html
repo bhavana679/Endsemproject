@@ -66,7 +66,7 @@
             margin-top: 40px;
         }
         .service-card {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.666);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -95,7 +95,7 @@
             margin-top: 10px;
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #d6bd42;
+            background-color: #000000;
             color: white;
             border: none;
             border-radius: 5px;
@@ -103,7 +103,7 @@
             transition: background-color 0.3s ease;
         }
         .service-card button:hover {
-            background-color: #b89c2e;
+            background-color: #dccfa0d7;
         }
         /* Back to Top */
         #back-to-top {
@@ -121,7 +121,7 @@
         }
 
         #back-to-top:hover {
-            background-color: #d6bd42;
+            background-color: #dccfa0d7;
         }
         /* Scroll Animations */
         [data-scroll] {
@@ -160,6 +160,7 @@
         }
         h3{
             font-family:'Cormorant SC';
+            color:white;
         }
         li{
             font-family:'Cormorant SC'; 
@@ -172,6 +173,8 @@
         }
         .hidden-text {
             display: none;
+            
+
         }
 
     </style>
@@ -194,35 +197,35 @@
     </header>
 
     <!-- Services Section -->
-    <section id="services" style="background: url('path-to-image.jpg') no-repeat center center/cover; height: 100vh; width: 100%;">
-        <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;color: #333;">Our Services</h2>
+    <section id="services" style="background: url('images/i26.png') no-repeat center center/cover; height: 100vh; width: 100%;">
+        <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;color: #ffffff;">Our Services</h2>
         <div class="service-container">
             <!-- Event Consultation -->
             <div class="service-card">
                 <img src="images/i13.png" alt="Event Consultation">
-                <h3>Event Consultation</h3>
-                <p class="hidden-text">Get expert advice and consultation for your event. We guide you step-by-step to ensure every detail is perfect.</p>
+                <h3 style="color: rgb(0, 0, 0);">Event Consultation</h3>
+                <p class="hidden-text" style="color:#000000;">Get expert advice and consultation for your event. We guide you step-by-step to ensure every detail is perfect.</p>
                 <button style="font-family: Texturina;"onclick="toggleText(this)">Learn More</button>
             </div>
             <!-- Venue Selection -->
             <div class="service-card">
                 <img src="images/i14.png" alt="Venue Selection">
-                <h3>Venue Selection</h3>
-                <p class="hidden-text">Choose the perfect venue with our curated options. Whether it’s a grand hall or an intimate space, we’ve got it covered.Time for you to explore the best!</p>
+                <h3 style="color: rgb(0, 0, 0);">Venue Selection</h3>
+                <p class="hidden-text" style="color:#000000;">Choose the perfect venue with our curated options. Whether it’s a grand hall or an intimate space, we’ve got it covered.Time for you to explore the best!</p>
                 <button style="font-family: Texturina;" onclick="toggleText(this)">Learn More</button>
             </div>
             <!-- Event Theme & Decor -->
             <div class="service-card">
                 <img src="images/i16.png" alt="Event Theme & Decor">
-                <h3>Event Theme & Decor</h3>
-                <p class="hidden-text">Transform your vision into reality with unique themes and elegant decor tailored to your preferences.</p>
+                <h3 style="color: rgb(0, 0, 0);">Event Theme & Decor</h3>
+                <p class="hidden-text" style="color:#000000;">Transform your vision into reality with unique themes and elegant decor tailored to your preferences.</p>
                 <button style="font-family: Texturina;"onclick="toggleText(this)">Learn More</button>
             </div>
             <!-- Catering Services -->
             <div class="service-card">
                 <img src="images/i15.png" alt="Catering Services">
-                <h3>Catering Services</h3>
-                <p class="hidden-text">Delicious and tailored menu options for every event. We offer a variety of cuisines to suit your preferences.</p>
+                <h3 style="color: rgb(0, 0, 0);">Catering Services</h3>
+                <p class="hidden-text" style="color:#000000;">Delicious and tailored menu options for every event. We offer a variety of cuisines to suit your preferences.</p>
                 <button style="font-family: Texturina;" onclick="toggleText(this)">Learn More</button>
             </div>
         </div>
@@ -241,7 +244,7 @@
                     <li>✖ Catering</li>
                     <li>✖ Decor</li>
                 </ul>
-                <button style="margin-top: 20px; padding: 10px 20px; background-color: #d6bd42; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-family: Texturina;">Select Package</button>
+                <button style="margin-top: 20px; padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-family: Texturina;">Select Package</button>
             </div>
             <!-- Premium Package -->
             <div class="pricing-plan" style="width: 300px; border: 1px solid #ddd; border-radius: 10px; background: white; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
@@ -253,7 +256,7 @@
                     <li>✔ Catering & Decor</li>
                     <li>✔ On-Site Management</li>
                 </ul>
-                <button style="margin-top: 20px; padding: 10px 20px; background-color: #d6bd42; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;font-family: Texturina;">Select Package</button>
+                <button style="margin-top: 20px; padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;font-family: Texturina;">Select Package</button>
             </div>
             <!-- Luxury Package -->
             <div class="pricing-plan" style="width: 300px; border: 1px solid #ddd; border-radius: 10px; background: white; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
@@ -265,7 +268,7 @@
                     <li>✔ Gourmet Dining Experience</li>
                     <li>✔ Professional Photography</li>
                 </ul>
-                <button style="margin-top: 20px; padding: 10px 20px; background-color: #d6bd42; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;font-family: Texturina;">Select Package</button>
+                <button style="margin-top: 20px; padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;font-family: Texturina;">Select Package</button>
             </div>
             <!-- Exclusive Package -->
             <div class="pricing-plan" style="width: 300px; border: 1px solid #ddd; border-radius: 10px; background: white; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
@@ -277,7 +280,7 @@
                     <li>✔ Exclusive Venue Access</li>
                     <li>✔ Concierge Services</li>
                 </ul>
-                <button style="margin-top: 20px; padding: 10px 20px; background-color: #d6bd42; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;font-family: Texturina;">Select Package</button>
+                <button style="margin-top: 20px; padding: 10px 20px; background-color: #000000; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;font-family: Texturina;">Select Package</button>
             </div>
         </div>
     </section>
