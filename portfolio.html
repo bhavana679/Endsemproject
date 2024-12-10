@@ -24,6 +24,45 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Basic Reset */
+    .showcase-item {
+        display: flex;
+        gap: 20px; /* Space between the image and text */
+        padding: 20px;
+        background: #f5f5dc9c; /* Light beige tone */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        align-items: stretch; /* Ensures both image and text occupy the same height */
+    }
+
+    .showcase-item img {
+        flex: 1; /* Makes the image occupy equal space as text */
+        max-width: 100%; /* Ensures responsiveness */
+        height: auto; /* Maintains aspect ratio */
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .showcase-item img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .showcase-item p {
+        flex: 1; /* Makes the text occupy equal space as the image */
+        font-family: 'Cormorant SC', serif;
+        font-size: 18px;
+        color: #333;
+        line-height: 1.6;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center; /* Vertically centers the text */
+        justify-content: center; /* Ensures balanced text alignment */
+        text-align: justify;
+    }
         * {
             margin: 0;
             padding: 0;
@@ -178,6 +217,7 @@
                 <a href="index.html"><h1 style="font-family: 'Herr Von Muellerhoff', sans-serif;">Ivory Luxe</h1></a>
             </div>
             <ul class="nav-links" style="font-family:Cormorant SC ;">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
@@ -197,7 +237,7 @@
         <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;">Weddings</h2>
         <div class="showcase">
             <div style="display: flex; align-items: center;gap:1px;padding: 10px;">
-                <img src="images/pexels-alexander-mass-748453803-19372846.jpg" alt="Wedding Showcase 1" style="width: 300px; border-radius: 10px;">
+                <img src="images/i20.png" alt="Wedding Showcase 1" style="width: 300px; border-radius: 10px;">
                 <p style="font-family: Cormorant SC;">Weddings are a celebration of love, unity, and the start of a beautiful journey together. At Ivory Luxe, we craft bespoke wedding experiences that blend traditional charm with modern aesthetics. Our expertise in designing breathtaking venues, coordinating seamless ceremonies, and delivering heartfelt moments has made us a trusted partner for countless couples.</p>
                 <img src="images/pexels-masoodaslami-29624054.jpg" alt="Wedding Showcase 2" style="width: 300px; border-radius: 10px;">
                 <p style="font-family: Cormorant SC;">Experience the magic of extraordinary decor designed with unmatched attention to detail. Every element is thoughtfully curated, blending beauty and precision to create breathtaking settings that captivate the heart and soul.</p>
