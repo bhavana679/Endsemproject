@@ -202,7 +202,7 @@
             display: flex;
             align-items: center;
             padding: 60px 20px 60px 0px;
-            background-color: #000;
+            background-color: #000000;
         }
 
         .appointment-container {
@@ -212,37 +212,56 @@
             height: 650px;
 
         }
-
         .appointment-image img {
-            max-width: 100%;
-            width: 75%;
+            max-width: 150%;
+            width: 150%;
             height: 650px;
             border-radius: 0px;
         }
         /* Initial state for the roll-out effect */
         .roll-out-image {
             position: relative;
-            max-width: 100%;
-            width: 0; /* Start with zero width */
-            height: 80%;
-            border-radius: 0px;
-            transition: width 1.5s ease-out; /* Smooth transition effect */
+            margin-left: 4%; /* Starts with a 4% left margin */
+            width: 100%; /* Starts with full width (image is fully visible initially) */
+            height: 90%; /* The image height is 90% of its container's height */
+            border-radius: 0px; /* No rounded corners */
+            transition: width 1.5s ease-out, opacity 1.5s ease-out; /* Smooth transition for width and opacity */
+            opacity: 1; /* Starts fully visible */
+            object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
+            z-index: 1;
         }
 
-        /* Final state when the image is visible */
+        /* Final state when the image is hidden */
         .roll-out-image.visible {
-            width: 75%; /* Final width after animation */
+            width: 0%; /* Shrinks to zero width, making the image disappear horizontally */
+            opacity: 0; /* Fades the image out to make it invisible */
+            margin-left: 10px; /* Optional - moves the image slightly to the right */
+        }
+        /* Initial state for the second image (will fade in when the first one fades out) */
+        .fade-in-image {
+            opacity: 0; /* Starts invisible */
+            transition: opacity 2s ease-in-out; /* Smooth opacity transition */
+            object-fit: cover;
+            height: 90%; /* Match the first image's height */
+            width: 100%; /* Same width as the first image */
+            z-index: 2;
         }
 
+        /* Final state when the second image is visible */
+        .fade-in-image.visible {
+            opacity: 1; /* Fade in the image */
+        }
 
         .appointment-text h2 {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
+            margin-left: 120px;
         }
 
         .appointment-text p {
-            font-size: 2.2rem;
+            font-size: 1.9rem;
             margin-bottom: 20px;
+            margin-left: 120px;
         }
 
         .cta-link {
@@ -403,11 +422,15 @@
             <div class="appointment-image">
                 <img src="images/pexels-pavel-danilyuk-6405665.jpg" alt="Appointment" class="roll-out-image">
             </div>
-            
-            <div class="appointment-text" style="color: #e0d2d2;">
-                <h2 style="font-family:Tangerin;">Never Done an Appointment Before?</h2>
+
+            <div class="appointment-image">
+                <img src="images/pexels-rdne-7648319.jpg" alt="New Appointment" class="fade-in-image">
+            </div>
+                
+            <div class="appointment-text" style="color: #e0d2d2; padding-left: 100px;">
+                <h2 style="font-family:Tangerine;">Never Done an Appointment Before?</h2>
                 <p style="font-family:Cormorant SC;">Click below to learn more about our services and how we can help make your event unforgettable.</p>
-                <a href="#services" class="cta-link" style="font-family:Cormorant SC ;background-color: #fff;color: #333;">Explore Services</a>
+                <a href="#services" class="cta-link" style="font-family:Cormorant SC ;background-color: #fff;color: #333;margin-left: 280px;">Explore Services</a>
             </div>
         </div>
     </section>
@@ -443,23 +466,27 @@
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-        const image = document.querySelector(".roll-out-image");
+            const firstImage = document.querySelector(".roll-out-image");
+            const secondImage = document.querySelector(".fade-in-image");
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        image.classList.add("visible"); // Add class when in view
-                    } else {
-                        image.classList.remove("visible"); // Reset when out of view (optional)
-                    }
-                });
-            },
-            { threshold: 0.1 } // Trigger when 10% of the image is in view
-        );
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            firstImage.classList.add("visible"); // Add class to fade out the first image
+                            secondImage.classList.add("visible"); // Add class to fade in the second image
+                        } else {
+                            firstImage.classList.remove("visible"); // Optional: Remove class when out of view
+                            secondImage.classList.remove("visible"); // Optional: Remove class when out of view
+                        }
+                    });
+                },
+                { threshold: 0.1 } // Trigger when 10% of the image is in view
+            );
 
-        observer.observe(image);
+            observer.observe(firstImage);
         });
+
         window.addEventListener('scroll', function () {
         const backToTop = document.getElementById('back-to-top');
         if (window.scrollY > 1900){
