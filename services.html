@@ -166,8 +166,24 @@
         .faq-item button{
             margin-top: auto; /* Pushes the button to the bottom */
             align-self: center; /* Centers the button horizontally */
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: Tangerine;
+            font-size: 30px; /* Increase font size */
+            padding: 20px; /* Add more padding for a larger button */
+            line-height: 1.5; /* Improve readability */
+            width: 600px;
 
         }
+        .faq-item p {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 22px; /* Increase font size for answers */
+            line-height: 1.8; /* Improve readability */
+            color: #333; /* Ensure good contrast for visibility */
+            margin: 15px 0; /* Add spacing around the text */
+                }
 
         /* FAQ */
         .faq-item {
@@ -191,6 +207,45 @@
             
 
         }
+        @media (max-width: 768px) {
+            .faq {
+                padding: 20px;
+            }
+
+            .faq-item button {
+                font-size: 16px;
+            }
+        }
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .faq {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.8); /* Optional overlay for readability */
+            padding: 40px;
+            border-radius: 10px;
+        }
+        /* FAQ Container */
+        .faq-container {
+            text-align: center; /* Centers text inside the container */
+            margin: 0 auto; /* Centers the container itself */
+        }
+
+
+
 
     </style>
 </head>
@@ -301,25 +356,34 @@
     </section>
 
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq" style="padding: 60px 20px;background: url('path-to-image.jpg') no-repeat center center/cover; height: 100vh; width: 100%;">
-        <h2 class="section-title" style="font-size: 36px; text-align: center; margin-bottom: 40px;">FAQ</h2>
-        <div style="max-width: 800px; margin: 0 auto;">
+    <section id="faq" class="faq" style="padding: 60px 20px; position: relative; overflow: hidden; height: 100vh;">
+        <div class="faq-container">
+        <!-- Background Video -->
+        <div class="video-container">
+            <video autoplay muted loop class="background-video">
+                <source src="images/p.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    
+        <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
+            <h2 class="section-title" style="font-size: 45px; text-align: center; margin-bottom: 150px; color: #ffffffdf;font-family:Cormorant SC;">FAQ</h2>
             <div class="faq-item" style="margin-bottom: 20px;">
-                <button style="width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 15px; text-align: left; font-size: 18px; cursor: pointer;font-family: Tangerine;font-size: 30px;" onclick="toggleFAQ(this)">How far in advance should I book?</button>
-                <p style="margin: 0; padding: 10px; display: none; font-size: 16px; color: #555;">We recommend booking at least 6 months in advance for large events.</p>
+                <button onclick="toggleFAQ(this)">How far in advance should I book?</button>
+                <p style="display: none;">We recommend booking at least 6 months in advance for large events.</p>
             </div>
             <div class="faq-item" style="margin-bottom: 20px;">
-                <button style="width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 15px; text-align: left; font-size: 18px; cursor: pointer;font-family: Tangerine;font-size: 30px;" onclick="toggleFAQ(this)">What services are included in the premium package?</button>
-                <p style="margin: 0; padding: 10px; display: none; font-size: 16px; color: #555;">The premium package includes event consultation, venue selection, catering, decor, and on-site management.</p>
+                <button onclick="toggleFAQ(this)">What services are included in the premium package?</button>
+                <p style="display: none;">The premium package includes event consultation, venue selection, catering, decor, and on-site management.</p>
             </div>
             <div class="faq-item" style="margin-bottom: 20px;">
-                <button style="width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 15px; text-align: left; font-size: 18px; cursor: pointer;font-family: Tangerine;font-size: 30px;" onclick="toggleFAQ(this)">Do you offer custom packages?</button>
-                <p style="margin: 0; padding: 10px; display: none; font-size: 16px; color: #555;">Yes, we can create custom packages tailored to your specific needs and budget.</p>
+                <button onclick="toggleFAQ(this)">Do you offer custom packages?</button>
+                <p style="display: none;">Yes, we can create custom packages tailored to your specific needs and budget.</p>
             </div>
         </div>
+        </div>
     </section>
-
+    
 
 
     <!-- Back to Top -->
