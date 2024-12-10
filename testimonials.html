@@ -83,6 +83,7 @@
             font-size: 2rem;
             margin-bottom: 20px;
             text-align: center;
+            color: #000000;
         }
 
         .testimonial-grid {
@@ -92,7 +93,7 @@
         }
 
         .testimonial-card {
-            background: white;
+            background: rgba(0, 0, 0, 0.39);
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -115,13 +116,15 @@
         .testimonial-card h3 {
             margin: 10px 0 5px;
             font-size: 1.2rem;
+            color: #ffffff;
         }
 
         .testimonial-card p {
             font-size: 2rem;
-            color: #555;
+            color: #ffffff;
             width: 400px;
             height: 120px;
+
 
         }
         
@@ -287,8 +290,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <!-- Weddings Section -->
-    <section>
+    <section style="padding-top:30px ;background-image: url('images/WhatsApp\ Image\ 2024-12-10\ at\ 9.19.14\ PM.jpeg');">
         <div class="testimonial-section">
             <h2  style="font-family: 'Herr Von Muellerhoff', sans-serif;font-size: 60px;">Weddings</h2>
             <div class="testimonial-grid">
@@ -315,7 +317,7 @@
     </section>
 
         <!-- Corporate Section -->
-    <section>
+    <section style="background-image: url('images/WhatsApp\ Image\ 2024-12-10\ at\ 9.19.14\ PM.jpeg');">
         <div class="testimonial-section">
             <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;font-size: 60px;">Corporate Events</h2>
             <div class="testimonial-grid">
@@ -342,7 +344,7 @@
     </section>
 
         <!-- Parties Section -->
-    <section>
+    <section style="background-image: url('images/WhatsApp\ Image\ 2024-12-10\ at\ 9.19.14\ PM.jpeg');">
         <div class="testimonial-section">
             <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;font-size: 60px;">Parties</h2>
             <div class="testimonial-grid">
@@ -368,15 +370,23 @@
         </div>
     </section>
 
-    <section >
-        <div class="testimonial-section submit-section">
-            <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif;font-size: 60px;">Submit Your Testimonial</h2>
-            <div class="form-container" style="font-family: Cormorant SC;">
-                <form id="testimonialForm" style="width: 500px ;height: 500px;">
-                    <label for="review">Your Review:</label>
+    <section style="width: 100%;height: auto;">
+        <div class="testimonial-section submit-section" style="position: relative; overflow: hidden;">
+                    <!-- Background Video -->
+        <video autoplay muted loop id="background-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="images/3895039-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        
+            <!-- Testimonial Form Section -->
+            <div class="form-container" style="font-family: Cormorant SC; background: rgba(255, 255, 255, 0.075); padding: 20px; border-radius: 8px;">
+                <h2 style="font-family: 'Herr Von Muellerhoff', sans-serif; font-size: 60px;color: rgb(255, 255, 255);">Submit Your Testimonial</h2>
+                <form id="testimonialForm" style="width: 500px; height: 500px;" action="https://formsubmit.co/birajitsaikia@gmail.com" method="POST" onsubmit="showSuccessMessage(event)">
+                    <label for="review" style="color: azure;">Your Review:</label>
                     <textarea id="review" name="review" rows="4" placeholder="Write your review here..." style="font-family: Cormorant SC;" required></textarea>
-    
-                    <label for="rating">Your Rating:</label>
+        
+                    <label for="rating" style="color: #fff7e7;font-weight: bolder;">Your Rating:</label>
                     <div id="rating">
                         <span class="star" data-value="1">★</span>
                         <span class="star" data-value="2">★</span>
@@ -384,15 +394,18 @@
                         <span class="star" data-value="4">★</span>
                         <span class="star" data-value="5">★</span>
                     </div>
-    
+        
                     <input type="hidden" id="starRating" name="starRating" value="0">
-    
+        
                     <button type="submit">Submit</button>
                 </form>
-                <p id="successMessage" style="display: none; color: green;">Success! Thank you for your testimonial! 🥰</p>
+                
+                <!-- Success Message -->
+                <p id="successMessage" style="display: none; color: rgb(248, 248, 248); font-family: Cormorant SC; margin-top: 20px;">Success! Thank you for your testimonial! 🥰</p>
             </div>
         </div>
     </section>
+    
     
 
     <!-- Back to Top -->
@@ -445,6 +458,20 @@
             document.getElementById('successMessage').style.display = 'block';
             document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
         });
+        function showSuccessMessage(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Show the success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Optionally, reset the form
+            document.getElementById('testimonialForm').reset();
+            
+            // Simulate submission to the email (FormSubmit handles it)
+            setTimeout(() => {
+                // Automatically submit the form after success message is shown
+                document.getElementById('testimonialForm').submit();
+            }, 2000); // Adjust the time delay (in ms) if needed
+        }
 
     </script>
 </body>

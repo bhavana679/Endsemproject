@@ -417,5 +417,11 @@ footer {
       flex-direction: column;
     }
   }
-  
-  
+  .service-card-link {
+      text-decoration: none; /* Removes the underline */
+      color: inherit;       /* Ensures the text color remains unchanged */
+  }
+  .portfolio-item-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit;       /* Ensures text color is unchanged */
+  }
