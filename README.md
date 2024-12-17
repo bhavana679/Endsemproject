@@ -53,13 +53,6 @@
 
 ---
 
-## 👩‍💻 Contributors
-
-This project was brought to life by:  
-- **Birajit Saikia**  
-- **Sakina [Last Name]**  
-- **Bhavana [Last Name]**
-
 We hope you enjoy using Ivory Luxe as much as we enjoyed building it! 🎉  
 
 ---
